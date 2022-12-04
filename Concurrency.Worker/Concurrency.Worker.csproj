@@ -10,4 +10,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Concurrency.Common\Common.csproj" />
+    <ProjectReference Include="..\..\Test\Unitee.EventDriven\Unitee.EventDriven.RedisStream\Unitee.EventDriven.RedisStream.csproj" />
+  </ItemGroup>
 </Project>

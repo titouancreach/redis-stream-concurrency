@@ -4,7 +4,7 @@ using Concurrency.Common;
 using StackExchange.Redis;
 using Unitee.EventDriven.RedisStream;
 
-var eventPerSecond = 2;
+var eventPerSecond = 50;
 
 var running = true;
 
@@ -32,7 +32,7 @@ while (running)
 
     Console.WriteLine(toWait);
 
-    await Task.Delay(TimeSpan.FromSeconds(1.0 / eventPerSecond) - sw.Elapsed);
+    await Task.Delay(Math.Max((int)toWait.TotalMilliseconds, 0));
 }
 
 await publisher.PublishAsync(new StopEvt());

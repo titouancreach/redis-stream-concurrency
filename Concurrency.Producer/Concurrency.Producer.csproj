@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Unitee.EventDriven.RedisStream" Version="6.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Concurrency.Common\Common.csproj" />
+    <ProjectReference Include="..\..\Test\Unitee.EventDriven\Unitee.EventDriven.RedisStream\Unitee.EventDriven.RedisStream.csproj" />
   </ItemGroup>
 
 </Project>
